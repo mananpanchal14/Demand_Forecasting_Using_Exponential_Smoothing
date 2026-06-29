@@ -54,9 +54,17 @@ Each dataset contains 108 monthly observations (9 years × 12 months), providing
     - Interpret the results from a business and supply chain planning perspective.
 
 ## Forecasting Model Selection Summary
+  Historical demand was visually inspected first to identify the presence of level, trend, and seasonality before selecting an appropriate forecasting model. Below is the graphical representation of each demand dataset:
+  
+![Demand_pattern_comparison.png](Images/Demand_pattern_comparison.png)
+  
   Each dataset was analyzed independently to identify its underlying demand characteristics before selecting an appropriate forecasting technique. Rather than assuming a single forecasting model would perform well across all products, multiple Exponential Smoothing methods were evaluated and compared using Mean Absolute Error (MAE) and Mean Absolute Percentage Error (MAPE). The final model for each dataset was selected based on both the observed demand pattern and quantitative forecasting accuracy.
 
 ![Forecasting_model_selection_summary](Images/Forecasting_model_selection_summary.png)
+
+And below is the graphical representation of how each model forecasted demands vs the actual demand plots for comparison:
+
+![Selected_model_performance](Images/Selected_model_performance.png)
 
   The results demonstrate that forecasting accuracy depends on selecting a model that aligns with the underlying characteristics of the demand data rather than consistently applying the most complex forecasting technique. Simpler models such as SES may outperform more sophisticated approaches when the demand pattern is relatively stable, whereas datasets exhibiting trend and seasonality benefit from Holt-Winters Exponential Smoothing.
 
